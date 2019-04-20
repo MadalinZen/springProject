@@ -5,6 +5,47 @@
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
- 
+ <bean name="toolsPrimul" class="com.sda.example.production.Tool">
+    
+     <constructor-arg index="0" value="3"/>
+     <constructor-arg index="1" value="hammerPrimul"/>
+        
+    </bean>
+    
+    
+    <bean name="hammer" class="com.sda.example.production.Tool">
+        
+        <constructor-arg index="0" value="2"/>
+        <constructor-arg index="1" value="hammer"/>
+    </bean>
+    
+    <bean name="fierastrau" class="com.sda.example.production.Tool">
+        
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="fierastrau"/>
+    </bean>
+    
+    <bean name="tools" class="java.util.ArrayList">
+        
+        <constructor-arg >
+            
+            <list>
+                <ref bean="hammer"/>
+                <ref bean="fierastrau"/>
+                <ref bean="toolsPrimul"/>
+                
+            </list>
+            
+        </constructor-arg>
+                    
+      
+    </bean>
+    
+    
+    
+    
+
+    
+    
    
 </beans>
